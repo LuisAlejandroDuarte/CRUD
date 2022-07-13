@@ -1,0 +1,38 @@
+<div class="container">
+
+<form (ngSubmit)="onSubmit()" [formGroup]="formGroup">
+  <mat-card>
+    <mat-card-title>Persona</mat-card-title>
+    <mat-card-subtitle>{{title}}</mat-card-subtitle>
+
+    <div class="row">
+      <div class="col-6">
+        <mat-form-field class="example-form-field" appearance="fill">
+          <mat-label>Nombre</mat-label>
+          <input matInput type="text" formControlName="nombre" >
+
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field class="example-form-field" appearance="fill">
+          <mat-label>Apellido</mat-label>
+          <input matInput type="text" formControlName="apellido" >
+
+        </mat-form-field>
+      </div>
+    </div>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary"  >Guardar</button>
+      <button mat-button color="warn" (click)="onSalir()">Salir</button>
+    </mat-card-actions>
+
+  </mat-card>
+</form>
+
+
+
+
+
+
+
+</div>
