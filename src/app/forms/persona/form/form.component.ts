@@ -33,7 +33,7 @@ export class FormComponent implements OnInit {
 
   onSubmit() {
     this.saveChanges.emit(this.persona);
-    console.log('Guardar');
+    console.log('Guardar')
   }
 
   onSalir() {

@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/shared/material/material.module';
-import { PersonaComponent } from './forms/persona/persona.component';
 import { ListComponent } from './forms/persona/list/list.component';
 import { FormComponent } from './forms/persona/form/form.component';
 import { EditarComponent } from './forms/persona/editar/editar.component';
@@ -17,7 +16,6 @@ import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    PersonaComponent,
     ListComponent,
     FormComponent,
     EditarComponent,
