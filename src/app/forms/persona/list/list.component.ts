@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PersonaService } from 'src/app/service/persona.service';
 declare const $: any;
 @Component({
   selector: 'app-list',
@@ -8,25 +9,30 @@ declare const $: any;
 })
 export class ListComponent implements OnInit,AfterViewInit {
   tabla:any;
-  constructor(private router:Router) { }
+  constructor(private router:Router,private servicePersona:PersonaService) { }
 
   ngOnInit(): void {
+    setTimeout(()=>{
+
+    });
   }
 
   ngAfterViewInit(): void {
 
 
     setTimeout(()=>{
-
+      console.log("Entre ngAfter");
       this.tabla= $('#datatables').DataTable({
         pagingType: "full_numbers",
         lengthMenu: [
           [10, 25, 50, -1],
           [10, 25, 50, "Todos"]
         ],
+        data:[],
         dom: '<"top"f>rt<"bottom"lp><"clear">',
-        columns:[{title:'Nombre',data:''},
-                 {title:'Apellido',data:''}
+        columns:[{title:'Id',data:'id'},
+                 {title:'Nombre',data:'nombre'},
+                 {title:'Apellido',data:'apellido'}
                 ],
         paging: true,
         language: {
@@ -47,6 +53,12 @@ export class ListComponent implements OnInit,AfterViewInit {
 
         });
 
+        const datos =this.servicePersona.getAll();
+        console.log("Datos",datos);
+        $('#datatables').DataTable().clear();
+        $('#datatables').DataTable().rows.add(datos);
+
+        $('#datatables').DataTable().draw();
 
       });
 

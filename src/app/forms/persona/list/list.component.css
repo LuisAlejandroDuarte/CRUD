@@ -5,3 +5,7 @@
 .toolbar2 {
   float: left;
 }
+
+.pull-left {
+  text-align: left !important;
+}

@@ -10,6 +10,7 @@ import { FormComponent } from './forms/persona/form/form.component';
 import { EditarComponent } from './forms/persona/editar/editar.component';
 import { CrearComponent } from './forms/persona/crear/crear.component';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -27,7 +28,8 @@ import { FormsModule,ReactiveFormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
