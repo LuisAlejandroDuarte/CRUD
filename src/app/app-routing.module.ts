@@ -5,6 +5,7 @@ import { ListComponent } from './forms/persona/list/list.component';
 
 
 const routes: Routes = [
+  {path: '', redirectTo: 'persona',pathMatch: 'full'},
   { path: 'persona', component: ListComponent },
   { path: 'crear-persona', component: CrearComponent }
 ];
